@@ -14,7 +14,7 @@ It contains following functions:
 
 **Disable-sthRDPNetworkLevelAuthentication** — Function disables Network Level Authentication requirement for RDP connections.
 
-You can install sthRDPTools module from PowerShellGallery:
+You can install sthRDPTools module from PowerShell Gallery:
 
 ```
 Install-Module sthRDPTools
