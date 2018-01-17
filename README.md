@@ -1,6 +1,6 @@
 # sthRDPTools
 
-sthRDPTools - it is a module, containing five functions to help enable/disable RDP connections on local and remote computers and to activate/deactivate Network Level Authentication requirement.
+**sthRDPTools** - it is a module, containing five functions to help enable/disable RDP connections on local and remote computers and to activate/deactivate Network Level Authentication requirement.
 
 It contains following functions:
 
