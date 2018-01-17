@@ -1,3 +1,7 @@
+<#
+.externalhelp sthRDPTools.psm1-Help.xml
+#>
+
 function Get-sthRDPConnectionsSetting
 {
     Param(
@@ -34,6 +38,10 @@ function Get-sthRDPConnectionsSetting
 }
 
 
+<#
+.externalhelp sthRDPTools.psm1-Help.xml
+#>
+
 function Enable-sthRDPConnections
 {
     Param(
@@ -55,6 +63,11 @@ function Enable-sthRDPConnections
         }
     }
 }
+
+
+<#
+.externalhelp sthRDPTools.psm1-Help.xml
+#>
 
 function Disable-sthRDPConnections
 {
@@ -78,6 +91,11 @@ function Disable-sthRDPConnections
     }
 }
 
+
+<#
+.externalhelp sthRDPTools.psm1-Help.xml
+#>
+
 function Enable-sthRDPNetworkLevelAuthentication
 {
     Param(
@@ -90,6 +108,11 @@ function Enable-sthRDPNetworkLevelAuthentication
         Set-sthRDPNetworkLevelAuthentication -ComputerName $comp -UserAuthenticationRequired 1
     }
 }
+
+
+<#
+.externalhelp sthRDPTools.psm1-Help.xml
+#>
 
 function Disable-sthRDPNetworkLevelAuthentication
 {

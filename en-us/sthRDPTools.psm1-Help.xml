@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<helpItems schema="maml">
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+
+    <command:details><command:name>Get-sthRDPConnectionsSetting</command:name>
+        <command:verb>Get</command:verb>
+        <command:noun>sthRDPConnectionsSetting</command:noun>
+        <maml:description>
+            <maml:para>Function checks whether RDP remote access is enabled and if Network Level Authentication is required.
+            </maml:para>
+        </maml:description>
+    </command:details>
+
+    <maml:description>
+        <maml:para>Function returns current settings on specified computers:
+        </maml:para>
+        <maml:para> - Allow remote connections to this computer
+        </maml:para>
+        <maml:para> - Allow connections only from computers running Remote Desktop with Network Level Authentication
+        </maml:para>
+    </maml:description>
+
+    <command:syntax>
+        <command:syntaxItem>
+            <maml:name>Get-sthRDPConnectionsSetting</maml:name>
+            <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0">
+                <maml:name>ComputerName</maml:name>
+                <maml:Description>
+                    <maml:para>Names of computers to check RDP settings. Default is 'localhost'.
+                    </maml:para>
+                </maml:Description>
+                <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
+                <dev:type>
+                    <maml:name>String[]</maml:name>
+                    <maml:uri />
+                </dev:type>
+                <dev:defaultValue>localhost</dev:defaultValue>
+            </command:parameter>
+        </command:syntaxItem>
+    </command:syntax>
+
+    <command:parameters>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0">
+            <maml:name>ComputerName</maml:name>
+            <maml:Description>
+                <maml:para>Names of computers to check RDP settings. Default is 'localhost'.
+                </maml:para>
+            </maml:Description>
+            <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
+            <dev:type>
+                <maml:name>String[]</maml:name>
+                <maml:uri />
+            </dev:type>
+            <dev:defaultValue>localhost</dev:defaultValue>
+        </command:parameter>
+    </command:parameters>
+
+    <command:examples>
+        <command:example>
+            <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+            <dev:code>Get-sthRDPConnectionsSetting
+            
+ComputerName AllowTSConnections NetworkLevelAuthentication
+------------ ------------------ --------------------------
+localhost                  True                       True
+            </dev:code>
+            <dev:remarks>
+                <maml:para/>
+                <maml:para>This command shows RDP settings on local computer.
+                </maml:para>
+                <maml:para/>
+                <maml:para/>
+            </dev:remarks>
+        </command:example>
+
+        <command:example>
+            <maml:title>-------------------------- EXAMPLE 2 --------------------------</maml:title>
+            <dev:code>Get-sthRDPConnectionsSetting -ComputerName comp1, comp2, comp3
+            
+ComputerName AllowTSConnections NetworkLevelAuthentication
+------------ ------------------ --------------------------
+comp1                      True                       True
+comp2                      True                       True
+comp3                      True                       True
+            </dev:code>
+            <dev:remarks>
+                <maml:para/>
+                <maml:para>This command shows RDP settings on specified computers.
+                </maml:para>
+                <maml:para/>
+                <maml:para/>
+            </dev:remarks>
+        </command:example>
+    </command:examples>
+</command:command>
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+
+    <command:details><command:name>Enable-sthRDPConnections</command:name>
+        <command:verb>Enable</command:verb>
+        <command:noun>sthRDPConnections</command:noun>
+        <maml:description>
+            <maml:para>Function enables RDP access.
+            </maml:para>
+        </maml:description>
+    </command:details>
+
+    <maml:description>
+        <maml:para>Function enables RDP access for specified computers and enables corresponding firewall rules.
+        </maml:para>
+        <maml:para> Optionally you can disable modifying firewall rules.
+        </maml:para>
+    </maml:description>
+
+    <command:syntax>
+        <command:syntaxItem>
+            <maml:name>Enable-sthRDPConnections</maml:name>
+            <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0">
+                <maml:name>ComputerName</maml:name>
+                <maml:Description>
+                    <maml:para>Names of computers to enable RDP access. Default is 'localhost'.
+                    </maml:para>
+                </maml:Description>
+                <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
+                <dev:type>
+                    <maml:name>String[]</maml:name>
+                    <maml:uri />
+                </dev:type>
+                <dev:defaultValue>localhost</dev:defaultValue>
+            </command:parameter>
+
+            <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named">
+                <maml:name>DontModifyFirewallException</maml:name>
+                <maml:Description>
+                    <maml:para>Disables modifying firewall exception.
+                    </maml:para>
+                </maml:Description>
+                <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+                <dev:type>
+                    <maml:name>SwitchParameter</maml:name>
+                    <maml:uri />
+                </dev:type>
+                <dev:defaultValue>False</dev:defaultValue>
+            </command:parameter>
+        </command:syntaxItem>
+    </command:syntax>
+
+    <command:parameters>
+            <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0">
+                <maml:name>ComputerName</maml:name>
+                <maml:Description>
+                    <maml:para>Names of computers to enable RDP access. Default is 'localhost'.
+                    </maml:para>
+                </maml:Description>
+                <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
+                <dev:type>
+                    <maml:name>String[]</maml:name>
+                    <maml:uri />
+                </dev:type>
+                <dev:defaultValue>localhost</dev:defaultValue>
+            </command:parameter>
+
+            <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named">
+                <maml:name>DontModifyFirewallException</maml:name>
+                <maml:Description>
+                    <maml:para>Disables modifying firewall exception.
+                    </maml:para>
+                </maml:Description>
+                <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+                <dev:type>
+                    <maml:name>SwitchParameter</maml:name>
+                    <maml:uri />
+                </dev:type>
+                <dev:defaultValue>False</dev:defaultValue>
+            </command:parameter>
+    </command:parameters>
+
+    <command:examples>
+        <command:example>
+            <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+            <dev:code>Enable-sthRDPConnections
+            
+ComputerName AllowTSConnections NetworkLevelAuthentication
+------------ ------------------ --------------------------
+localhost                  True                       True
+            </dev:code>
+            <dev:remarks>
+                <maml:para/>
+                <maml:para>This command enables RDP connections and enables firewall exception on local computer.
+                </maml:para>
+                <maml:para/>
+                <maml:para/>
+            </dev:remarks>
+        </command:example>
+
+        <command:example>
+            <maml:title>-------------------------- EXAMPLE 2 --------------------------</maml:title>
+            <dev:code>Enable-sthRDPConnections -DontModifyFirewallException
+            
+ComputerName AllowTSConnections NetworkLevelAuthentication
+------------ ------------------ --------------------------
+localhost                  True                       True
+            </dev:code>
+            <dev:remarks>
+                <maml:para/>
+                <maml:para>This command enables RDP connections on local computer, but don't modifies firewall exception.
+                </maml:para>
+                <maml:para/>
+                <maml:para/>
+            </dev:remarks>
+        </command:example>
+
+        <command:example>
+            <maml:title>-------------------------- EXAMPLE 3 --------------------------</maml:title>
+            <dev:code>Enable-sthRDPConnections -ComputerName comp1, comp2, comp3
+            
+ComputerName AllowTSConnections NetworkLevelAuthentication
+------------ ------------------ --------------------------
+comp1                      True                       True
+comp2                      True                       True
+comp3                      True                       True
+            </dev:code>
+            <dev:remarks>
+                <maml:para/>
+                <maml:para>This command enables RDP connections and enables firewall exceptions on specified computers.
+                </maml:para>
+                <maml:para/>
+                <maml:para/>
+            </dev:remarks>
+        </command:example>
+    </command:examples>
+</command:command>
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+
+    <command:details><command:name>Disable-sthRDPConnections</command:name>
+        <command:verb>Disable</command:verb>
+        <command:noun>sthRDPConnections</command:noun>
+        <maml:description>
+            <maml:para>Function disables RDP access.
+            </maml:para>
+        </maml:description>
+    </command:details>
+
+    <maml:description>
+        <maml:para>Function disables RDP access for specified computers and disables corresponding firewall rules.
+        </maml:para>
+        <maml:para> Optionally you can specify not to modify firewall rules.
+        </maml:para>
+    </maml:description>
+
+    <command:syntax>
+        <command:syntaxItem>
+            <maml:name>Disable-sthRDPConnections</maml:name>
+            <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0">
+                <maml:name>ComputerName</maml:name>
+                <maml:Description>
+                    <maml:para>Names of computers to disable RDP access. Default is 'localhost'.
+                    </maml:para>
+                </maml:Description>
+                <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
+                <dev:type>
+                    <maml:name>String[]</maml:name>
+                    <maml:uri />
+                </dev:type>
+                <dev:defaultValue>localhost</dev:defaultValue>
+            </command:parameter>
+
+            <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named">
+                <maml:name>DontModifyFirewallException</maml:name>
+                <maml:Description>
+                    <maml:para>Disables modifying firewall exception.
+                    </maml:para>
+                </maml:Description>
+                <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+                <dev:type>
+                    <maml:name>SwitchParameter</maml:name>
+                    <maml:uri />
+                </dev:type>
+                <dev:defaultValue>False</dev:defaultValue>
+            </command:parameter>
+        </command:syntaxItem>
+    </command:syntax>
+
+    <command:parameters>
+            <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0">
+                <maml:name>ComputerName</maml:name>
+                <maml:Description>
+                    <maml:para>Names of computers to disable RDP access. Default is 'localhost'.
+                    </maml:para>
+                </maml:Description>
+                <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
+                <dev:type>
+                    <maml:name>String[]</maml:name>
+                    <maml:uri />
+                </dev:type>
+                <dev:defaultValue>localhost</dev:defaultValue>
+            </command:parameter>
+
+            <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named">
+                <maml:name>DontModifyFirewallException</maml:name>
+                <maml:Description>
+                    <maml:para>Disables modifying firewall exception.
+                    </maml:para>
+                </maml:Description>
+                <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+                <dev:type>
+                    <maml:name>SwitchParameter</maml:name>
+                    <maml:uri />
+                </dev:type>
+                <dev:defaultValue>False</dev:defaultValue>
+            </command:parameter>
+    </command:parameters>
+
+    <command:examples>
+        <command:example>
+            <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+            <dev:code>Disable-sthRDPConnections
+            
+ComputerName AllowTSConnections NetworkLevelAuthentication
+------------ ------------------ --------------------------
+localhost                 False                       True
+            </dev:code>
+            <dev:remarks>
+                <maml:para/>
+                <maml:para>This command disables RDP connections and disables firewall exception on local computer.
+                </maml:para>
+                <maml:para/>
+                <maml:para/>
+            </dev:remarks>
+        </command:example>
+
+        <command:example>
+            <maml:title>-------------------------- EXAMPLE 2 --------------------------</maml:title>
+            <dev:code>Disable-sthRDPConnections -DontModifyFirewallException
+            
+ComputerName AllowTSConnections NetworkLevelAuthentication
+------------ ------------------ --------------------------
+localhost                 False                       True
+            </dev:code>
+            <dev:remarks>
+                <maml:para/>
+                <maml:para>This command disables RDP connections on local computer, but don't modifies firewall exception.
+                </maml:para>
+                <maml:para/>
+                <maml:para/>
+            </dev:remarks>
+        </command:example>
+
+        <command:example>
+            <maml:title>-------------------------- EXAMPLE 3 --------------------------</maml:title>
+            <dev:code>Disable-sthRDPConnections -ComputerName comp1, comp2, comp3
+            
+ComputerName AllowTSConnections NetworkLevelAuthentication
+------------ ------------------ --------------------------
+comp1                     False                       True
+comp2                     False                       True
+comp3                     False                       True
+            </dev:code>
+            <dev:remarks>
+                <maml:para/>
+                <maml:para>This command disables RDP connections and disables firewall exceptions on specified computers.
+                </maml:para>
+                <maml:para/>
+                <maml:para/>
+            </dev:remarks>
+        </command:example>
+    </command:examples>
+</command:command>
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+
+    <command:details><command:name>Enable-sthRDPNetworkLevelAuthentication</command:name>
+        <command:verb>Enable</command:verb>
+        <command:noun>sthRDPNetworkLevelAuthentication</command:noun>
+        <maml:description>
+            <maml:para>Function enables Network Level Authentication requirement for RDP connections.
+            </maml:para>
+        </maml:description>
+    </command:details>
+
+    <maml:description>
+        <maml:para>Function enables Network Level Authentication requirement when using RDP connections for specified computers.
+        </maml:para>
+    </maml:description>
+
+    <command:syntax>
+        <command:syntaxItem>
+            <maml:name>Enable-sthRDPNetworkLevelAuthentication</maml:name>
+            <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0">
+                <maml:name>ComputerName</maml:name>
+                <maml:Description>
+                    <maml:para>Names of computers to enable Network Level Authentication requirement for RDP connections.
+Default is 'localhost'.
+                    </maml:para>
+                </maml:Description>
+                <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
+                <dev:type>
+                    <maml:name>String[]</maml:name>
+                    <maml:uri />
+                </dev:type>
+                <dev:defaultValue>localhost</dev:defaultValue>
+            </command:parameter>
+        </command:syntaxItem>
+    </command:syntax>
+
+    <command:parameters>
+            <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0">
+                <maml:name>ComputerName</maml:name>
+                <maml:Description>
+                    <maml:para>Names of computers to enable Network Level Authentication requirement for RDP connections.
+Default is 'localhost'.
+                    </maml:para>
+                </maml:Description>
+                <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
+                <dev:type>
+                    <maml:name>String[]</maml:name>
+                    <maml:uri />
+                </dev:type>
+                <dev:defaultValue>localhost</dev:defaultValue>
+            </command:parameter>
+    </command:parameters>
+
+    <command:examples>
+        <command:example>
+            <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+            <dev:code>Enable-sthRDPNetworkLevelAuthentication
+            
+ComputerName AllowTSConnections NetworkLevelAuthentication
+------------ ------------------ --------------------------
+localhost                  True                       True
+            </dev:code>
+            <dev:remarks>
+                <maml:para/>
+                <maml:para>This command enables Network Level Authentication requirement for RDP connections on local computer.
+                </maml:para>
+                <maml:para/>
+                <maml:para/>
+            </dev:remarks>
+        </command:example>
+
+        <command:example>
+            <maml:title>-------------------------- EXAMPLE 2 --------------------------</maml:title>
+            <dev:code>Enable-sthRDPNetworkLevelAuthentication -ComputerName comp1, comp2, comp3
+            
+ComputerName AllowTSConnections NetworkLevelAuthentication
+------------ ------------------ --------------------------
+comp1                      True                       True
+comp2                      True                       True
+comp3                      True                       True
+            </dev:code>
+            <dev:remarks>
+                <maml:para/>
+                <maml:para>This command enables Network Level Authentication requirement for RDP connections on specified computers.
+                </maml:para>
+                <maml:para/>
+                <maml:para/>
+            </dev:remarks>
+        </command:example>
+    </command:examples>
+</command:command>
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+
+    <command:details><command:name>Disable-sthRDPNetworkLevelAuthentication</command:name>
+        <command:verb>Disable</command:verb>
+        <command:noun>sthRDPNetworkLevelAuthentication</command:noun>
+        <maml:description>
+            <maml:para>Function disables Network Level Authentication requirement for RDP connections.
+            </maml:para>
+        </maml:description>
+    </command:details>
+
+    <maml:description>
+        <maml:para>Function disables Network Level Authentication requirement when using RDP connections for specified computers.
+        </maml:para>
+    </maml:description>
+
+    <command:syntax>
+        <command:syntaxItem>
+            <maml:name>Disable-sthRDPNetworkLevelAuthentication</maml:name>
+            <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0">
+                <maml:name>ComputerName</maml:name>
+                <maml:Description>
+                    <maml:para>Names of computers to disable Network Level Authentication requirement for RDP connections.
+Default is 'localhost'.
+                    </maml:para>
+                </maml:Description>
+                <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
+                <dev:type>
+                    <maml:name>String[]</maml:name>
+                    <maml:uri />
+                </dev:type>
+                <dev:defaultValue>localhost</dev:defaultValue>
+            </command:parameter>
+        </command:syntaxItem>
+    </command:syntax>
+
+    <command:parameters>
+            <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByValue)" position="0">
+                <maml:name>ComputerName</maml:name>
+                <maml:Description>
+                    <maml:para>Names of computers to disable Network Level Authentication requirement for RDP connections.
+Default is 'localhost'.
+                    </maml:para>
+                </maml:Description>
+                <command:parameterValue required="true" variableLength="false">String[]</command:parameterValue>
+                <dev:type>
+                    <maml:name>String[]</maml:name>
+                    <maml:uri />
+                </dev:type>
+                <dev:defaultValue>localhost</dev:defaultValue>
+            </command:parameter>
+    </command:parameters>
+
+    <command:examples>
+        <command:example>
+            <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+            <dev:code>Disable-sthRDPNetworkLevelAuthentication
+            
+ComputerName AllowTSConnections NetworkLevelAuthentication
+------------ ------------------ --------------------------
+localhost                  True                      False
+            </dev:code>
+            <dev:remarks>
+                <maml:para/>
+                <maml:para>This command disables Network Level Authentication requirement for RDP connections on local computer.
+                </maml:para>
+                <maml:para/>
+                <maml:para/>
+            </dev:remarks>
+        </command:example>
+
+        <command:example>
+            <maml:title>-------------------------- EXAMPLE 2 --------------------------</maml:title>
+            <dev:code>Disable-sthRDPNetworkLevelAuthentication -ComputerName comp1, comp2, comp3
+            
+ComputerName AllowTSConnections NetworkLevelAuthentication
+------------ ------------------ --------------------------
+comp1                      True                      False
+comp2                      True                      False
+comp3                      True                      False
+            </dev:code>
+            <dev:remarks>
+                <maml:para/>
+                <maml:para>This command disables Network Level Authentication requirement for RDP connections on specified computers.
+                </maml:para>
+                <maml:para/>
+                <maml:para/>
+            </dev:remarks>
+        </command:example>
+    </command:examples>
+</command:command>
+
+</helpItems>
