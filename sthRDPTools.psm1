@@ -44,6 +44,8 @@ function Get-sthRDPConnectionsSetting
 
 function Enable-sthRDPConnections
 {
+    [CmdletBinding()]
+    [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseSingularNouns")]
     Param(
         [Parameter(ValueFromPipeline)]
         [string[]]$ComputerName = 'localhost',
@@ -71,6 +73,8 @@ function Enable-sthRDPConnections
 
 function Disable-sthRDPConnections
 {
+    [CmdletBinding()]
+    [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseSingularNouns")]
     Param(
         [Parameter(ValueFromPipeline)]
         [string[]]$ComputerName = 'localhost',
@@ -129,6 +133,9 @@ function Disable-sthRDPNetworkLevelAuthentication
 
 function Set-sthRDPConnections
 {
+    [CmdletBinding()]
+    [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseSingularNouns")]
+    [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseShouldProcessForStateChangingFunctions")]
     Param(
         [Parameter(Mandatory)]
         [string]$ComputerName,
@@ -179,6 +186,8 @@ function Set-sthRDPConnections
 
 function Set-sthRDPNetworkLevelAuthentication
 {
+    [CmdletBinding()]
+    [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseShouldProcessForStateChangingFunctions")]
     Param(
         [Parameter(Mandatory)]
         [string]$ComputerName,
