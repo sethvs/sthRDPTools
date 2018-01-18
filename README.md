@@ -58,7 +58,7 @@ ComputerName AllowTSConnections NetworkLevelAuthentication
 localhost                  True                       True
 ```
 
-This command enables RDP connections on local computer, but don't modifies firewall exception.
+This command enables RDP connections on local computer, but don't modifies firewall exception:
 
 ```
 Enable-sthRDPConnections -DontModifyFirewallException
@@ -68,7 +68,7 @@ ComputerName AllowTSConnections NetworkLevelAuthentication
 localhost                  True                       True
 ```
 
-This command enables RDP connections and enables firewall exceptions on specified computers.
+This command enables RDP connections and enables firewall exceptions on specified computers:
 
 ```
 Enable-sthRDPConnections -ComputerName comp1, comp2, comp3
@@ -92,7 +92,7 @@ ComputerName AllowTSConnections NetworkLevelAuthentication
 localhost                 False                       True
 ```
 
-This command disables RDP connections on local computer, but don't modifies firewall exception.
+This command disables RDP connections on local computer, but don't modifies firewall exception:
 
 ```
 Disable-sthRDPConnections -DontModifyFirewallException
@@ -116,7 +116,7 @@ comp3                     False                       True
 
 ### Enable-sthRDPNetworkLevelAuthentication
 
-This command enables Network Level Authentication requirement for RDP connections on local computer.
+This command enables Network Level Authentication requirement for RDP connections on local computer:
 
 ```
 Enable-sthRDPNetworkLevelAuthentication
@@ -126,7 +126,7 @@ ComputerName AllowTSConnections NetworkLevelAuthentication
 localhost                  True                       True
 ```
 
-This command enables Network Level Authentication requirement for RDP connections on specified computers.
+This command enables Network Level Authentication requirement for RDP connections on specified computers:
 
 ```
 Enable-sthRDPNetworkLevelAuthentication -ComputerName comp1, comp2, comp3
@@ -140,7 +140,7 @@ comp3                      True                       True
 
 ### Disable-sthRDPNetworkLevelAuthentication
 
-This command disables Network Level Authentication requirement for RDP connections on local computer.
+This command disables Network Level Authentication requirement for RDP connections on local computer:
 
 ```
 Disable-sthRDPNetworkLevelAuthentication
@@ -150,7 +150,7 @@ ComputerName AllowTSConnections NetworkLevelAuthentication
 localhost                  True                      False
 ```
 
-This command disables Network Level Authentication requirement for RDP connections on specified computers.
+This command disables Network Level Authentication requirement for RDP connections on specified computers:
 
 ```
 Disable-sthRDPNetworkLevelAuthentication -ComputerName comp1, comp2, comp3
