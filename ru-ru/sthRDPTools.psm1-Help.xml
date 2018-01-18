@@ -67,7 +67,7 @@ localhost                  True                       True
             </dev:code>
             <dev:remarks>
                 <maml:para/>
-                <maml:para>Команда показывает настройки локального компьютера.
+                <maml:para>Эта команда показывает настройки локального компьютера.
                 </maml:para>
                 <maml:para/>
                 <maml:para/>
@@ -86,7 +86,7 @@ comp3                      True                       True
             </dev:code>
             <dev:remarks>
                 <maml:para/>
-                <maml:para>Команда показывает настройки указанных компьютеров.
+                <maml:para>Эта команда показывает настройки указанных компьютеров.
                 </maml:para>
                 <maml:para/>
                 <maml:para/>
@@ -433,7 +433,7 @@ localhost                  True                       True
             </dev:code>
             <dev:remarks>
                 <maml:para/>
-                <maml:para>Команда активирует требование проверки подлинности на уровне сети (Network Level Authentication) для подключений по протоколу RDP на локальном компьютере.
+                <maml:para>Эта команда активирует требование проверки подлинности на уровне сети (Network Level Authentication) для подключений по протоколу RDP на локальном компьютере.
                 </maml:para>
                 <maml:para/>
                 <maml:para/>
@@ -452,7 +452,7 @@ comp3                      True                       True
             </dev:code>
             <dev:remarks>
                 <maml:para/>
-                <maml:para>Команда активирует требование проверки подлинности на уровне сети (Network Level Authentication) для подключений по протоколу RDP на указанных компьютерах.
+                <maml:para>Эта команда активирует требование проверки подлинности на уровне сети (Network Level Authentication) для подключений по протоколу RDP на указанных компьютерах.
                 </maml:para>
                 <maml:para/>
                 <maml:para/>
@@ -525,7 +525,7 @@ localhost                  True                      False
             </dev:code>
             <dev:remarks>
                 <maml:para/>
-                <maml:para>Команда деактивирует требование проверки подлинности на уровне сети (Network Level Authentication) для подключений по протоколу RDP на локальном компьютере.
+                <maml:para>Эта команда деактивирует требование проверки подлинности на уровне сети (Network Level Authentication) для подключений по протоколу RDP на локальном компьютере.
                 </maml:para>
                 <maml:para/>
                 <maml:para/>
@@ -544,7 +544,7 @@ comp3                      True                      False
             </dev:code>
             <dev:remarks>
                 <maml:para/>
-                <maml:para>Команда деактивирует требование проверки подлинности на уровне сети (Network Level Authentication) для подключений по протоколу RDP на указанных компьютерах.
+                <maml:para>Эта команда деактивирует требование проверки подлинности на уровне сети (Network Level Authentication) для подключений по протоколу RDP на указанных компьютерах.
                 </maml:para>
                 <maml:para/>
                 <maml:para/>
