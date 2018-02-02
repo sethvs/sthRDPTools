@@ -231,4 +231,3 @@ function Set-sthRDPNetworkLevelAuthentication
         New-Object -TypeName PSCustomObject -Property $Property
     }
 }
-
