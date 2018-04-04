@@ -4,15 +4,15 @@
 
 В модуль входят следующие функции:
 
-**Get-sthRDPConnectionsSetting** — Функция для проверки настроек - включен ли удаленный доступ по RDP и требуется ли Network Level Authentication.
+[**Get-sthRDPConnectionsSetting**](#get-sthrdpconnectionssetting) — Функция для проверки настроек - включен ли удаленный доступ по RDP и требуется ли Network Level Authentication.
 
-**Enable-sthRDPConnections** — Функция включает удаленный доступ по RDP к указанным компьютерам и активирует соответствующие правила брандмауэра Windows.
+[**Enable-sthRDPConnections**](#enable-sthrdpconnections) — Функция включает удаленный доступ по RDP к указанным компьютерам и активирует соответствующие правила брандмауэра Windows.
 
-**Disable-sthRDPConnections** — Функция отключает удаленный доступ по RDP к указанным компьютерам и деактивирует соответствующие правила брандмауэра Windows.
+[**Disable-sthRDPConnections**](#disablesthrdpconnections) — Функция отключает удаленный доступ по RDP к указанным компьютерам и деактивирует соответствующие правила брандмауэра Windows.
 
-**Enable-sthRDPNetworkLevelAuthentication** — Функция активирует требование проверки подлинности на уровне сети (Network Level Authentication) для подключений по протоколу RDP.
+[**Enable-sthRDPNetworkLevelAuthentication**](#enable-sthrdpnetworklevelauthentication) — Функция активирует требование проверки подлинности на уровне сети (Network Level Authentication) для подключений по протоколу RDP.
 
-**Disable-sthRDPNetworkLevelAuthentication** — Функция деактивирует требование проверки подлинности на уровне сети (Network Level Authentication) для подключений по протоколу RDP.
+[**Disable-sthRDPNetworkLevelAuthentication**](#disable-sthrdpnetworklevelauthentication) — Функция деактивирует требование проверки подлинности на уровне сети (Network Level Authentication) для подключений по протоколу RDP.
 
 Вы можете установить модуль sthRDPTools из PowerShell Gallery:
 
@@ -33,6 +33,8 @@ ComputerName AllowTSConnections NetworkLevelAuthentication
 ------------ ------------------ --------------------------
 localhost                  True                       True
 ```
+
+---
 
 Эта команда показывает настройки указанных компьютеров:
 
@@ -58,6 +60,8 @@ ComputerName AllowTSConnections NetworkLevelAuthentication
 localhost                  True                       True
 ```
 
+---
+
 Эта команда включает доступ по RDP на локальном компьютере, но не изменяет правила брандмауэра:
 
 ```
@@ -67,6 +71,8 @@ ComputerName AllowTSConnections NetworkLevelAuthentication
 ------------ ------------------ --------------------------
 localhost                  True                       True
 ```
+
+---
 
 Эта команда включает доступ по RDP и активирует соответствующие правила брандмауэра Windows на указанных компьютерах:
 
@@ -92,6 +98,8 @@ ComputerName AllowTSConnections NetworkLevelAuthentication
 localhost                 False                       True
 ```
 
+---
+
 Эта команда отключает доступ по RDP на локальном компьютере, но не изменяет правила брандмауэра:
 
 ```
@@ -101,6 +109,8 @@ ComputerName AllowTSConnections NetworkLevelAuthentication
 ------------ ------------------ --------------------------
 localhost                 False                       True
 ```
+
+---
 
 Эта команда отключает доступ по RDP и деактивирует соответствующие правила брандмауэра Windows на указанных компьютерах:
 
@@ -126,6 +136,8 @@ ComputerName AllowTSConnections NetworkLevelAuthentication
 localhost                  True                       True
 ```
 
+---
+
 Эта команда активирует требование проверки подлинности на уровне сети (Network Level Authentication) для подключений по протоколу RDP на указанных компьютерах:
 
 ```
@@ -149,6 +161,8 @@ ComputerName AllowTSConnections NetworkLevelAuthentication
 ------------ ------------------ --------------------------
 localhost                  True                      False
 ```
+
+---
 
 Эта команда деактивирует требование проверки подлинности на уровне сети (Network Level Authentication) для подключений по протоколу RDP на указанных компьютерах:
 

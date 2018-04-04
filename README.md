@@ -4,15 +4,15 @@
 
 It contains following functions:
 
-**Get-sthRDPConnectionsSetting** — Function checks whether RDP remote access is enabled and if Network Level Authentication is required.
+[**Get-sthRDPConnectionsSetting**](#get-sthrdpconnectionssetting) — Function checks whether RDP remote access is enabled and if Network Level Authentication is required.
 
-**Enable-sthRDPConnections** — Function enables RDP access for specified computers and enables corresponding firewall rules.
+[**Enable-sthRDPConnections**](#enable-sthrdpconnections) — Function enables RDP access for specified computers and enables corresponding firewall rules.
 
-**Disable-sthRDPConnections** — Function disables RDP access for specified computers and disables corresponding firewall rules.
+[**Disable-sthRDPConnections**](#disable-sthrdpconnections) — Function disables RDP access for specified computers and disables corresponding firewall rules.
 
-**Enable-sthRDPNetworkLevelAuthentication** — Function enables Network Level Authentication requirement for RDP connections.
+[**Enable-sthRDPNetworkLevelAuthentication**](#enable-sthrdpnetworklevelauthentication) — Function enables Network Level Authentication requirement for RDP connections.
 
-**Disable-sthRDPNetworkLevelAuthentication** — Function disables Network Level Authentication requirement for RDP connections.
+[**Disable-sthRDPNetworkLevelAuthentication**](#disable-sthrdpnetworklevelauthentication) — Function disables Network Level Authentication requirement for RDP connections.
 
 You can install sthRDPTools module from PowerShell Gallery:
 
@@ -33,6 +33,8 @@ ComputerName AllowTSConnections NetworkLevelAuthentication
 ------------ ------------------ --------------------------
 localhost                  True                       True
 ```
+
+---
 
 This command shows RDP settings on specified computers:
 
@@ -58,6 +60,8 @@ ComputerName AllowTSConnections NetworkLevelAuthentication
 localhost                  True                       True
 ```
 
+---
+
 This command enables RDP connections on local computer, but don't modifies firewall exception:
 
 ```
@@ -67,6 +71,8 @@ ComputerName AllowTSConnections NetworkLevelAuthentication
 ------------ ------------------ --------------------------
 localhost                  True                       True
 ```
+
+---
 
 This command enables RDP connections and enables firewall exceptions on specified computers:
 
@@ -92,6 +98,8 @@ ComputerName AllowTSConnections NetworkLevelAuthentication
 localhost                 False                       True
 ```
 
+---
+
 This command disables RDP connections on local computer, but don't modifies firewall exception:
 
 ```
@@ -101,6 +109,8 @@ ComputerName AllowTSConnections NetworkLevelAuthentication
 ------------ ------------------ --------------------------
 localhost                 False                       True
 ```
+
+---
 
 This command disables RDP connections and disables firewall exceptions on specified computers:
 
@@ -126,6 +136,8 @@ ComputerName AllowTSConnections NetworkLevelAuthentication
 localhost                  True                       True
 ```
 
+---
+
 This command enables Network Level Authentication requirement for RDP connections on specified computers:
 
 ```
@@ -149,6 +161,8 @@ ComputerName AllowTSConnections NetworkLevelAuthentication
 ------------ ------------------ --------------------------
 localhost                  True                      False
 ```
+
+---
 
 This command disables Network Level Authentication requirement for RDP connections on specified computers:
 
