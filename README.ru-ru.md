@@ -8,7 +8,7 @@
 
 [**Enable-sthRDPConnections**](#enable-sthrdpconnections) — Функция включает удаленный доступ по RDP к указанным компьютерам и активирует соответствующие правила брандмауэра Windows.
 
-[**Disable-sthRDPConnections**](#disablesthrdpconnections) — Функция отключает удаленный доступ по RDP к указанным компьютерам и деактивирует соответствующие правила брандмауэра Windows.
+[**Disable-sthRDPConnections**](#disable-sthrdpconnections) — Функция отключает удаленный доступ по RDP к указанным компьютерам и деактивирует соответствующие правила брандмауэра Windows.
 
 [**Enable-sthRDPNetworkLevelAuthentication**](#enable-sthrdpnetworklevelauthentication) — Функция активирует требование проверки подлинности на уровне сети (Network Level Authentication) для подключений по протоколу RDP.
 
